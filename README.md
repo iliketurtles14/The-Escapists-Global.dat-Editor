@@ -1,2 +1,2 @@
 # The-Escapists-Global.dat-Editor
-Creates a global.dat file for The Escapists.
+This program allows you to create a global.dat file for The Escapists much easier now.
