@@ -1,0 +1,176 @@
+﻿<Page x:Class="The_Escapists_Global_Editor.AllPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:The_Escapists_Global_Editor"
+      mc:Ignorable="d" 
+      Title= "AllPage"
+      Height="450"
+      Width="800"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      >
+
+    <Grid HorizontalAlignment="Center">
+        <Grid.Background>
+            <ImageBrush ImageSource="Graphics/WindowBackground.png" Stretch="None"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="52"/>
+            <ColumnDefinition Width="184"/>
+            <ColumnDefinition Width="52"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Image
+            Margin="0,0,0,1"
+            Stretch="None"
+            Source="Graphics/Title.png"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+        ></Image>
+        <Image
+            Stretch="None"
+            Grid.Row="3"
+            Grid.Column="8"
+            Source="Graphics/SelectText.png"
+        ></Image>
+        <Image
+            Stretch="None"
+            Grid.Row="4"
+            Grid.Column="8"
+            VerticalAlignment="Top"
+            Source="Graphics/AboutTitle.png"
+        ></Image>
+        <Image
+            Stretch="None"
+            Grid.Row="4"
+            Grid.Column="8"
+            Grid.RowSpan="4"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,3"
+            Source="Graphics/AboutText.png"
+        ></Image>
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="6"
+            BorderBrush="Black"
+            BorderThickness="5"
+            Grid.RowSpan="4"
+            Margin="0,0,0,23"
+            Focusable="False"
+            IsHitTestVisible="False"
+            x:Name="AllListTextBox"
+        ></TextBox>
+        <Button
+            Margin="0,49,0,0"
+            Grid.Row="6"
+            Grid.Column="6"
+            Grid.RowSpan="2"
+            VerticalAlignment="Top"
+            Width="175"
+            Height="35"
+            Click="AllResetClick"
+            x:Name="AllResetButton"
+            Background="Transparent"
+            BorderBrush="Transparent"
+        >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Graphics/ResetNormal.png" Stretch="Uniform"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Graphics/ResetHover.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Margin="0,0,0,30"
+            Grid.Row="6"
+            Grid.Column="6"
+            Grid.RowSpan="2"
+            VerticalAlignment="Bottom"
+            Width="175"
+            Height="35"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Click="AllCreateClick"
+            x:Name="AllCreateButton"
+        >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Graphics/CreateNormal.png" Stretch="Uniform"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Graphics/CreateHover.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Margin="0,0,0,0"
+            Grid.Row="6"
+            Grid.Column="6"
+            Grid.RowSpan="2"
+            VerticalAlignment="Bottom"
+            Width="175"
+            Height="35"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Click="AllBackClick"
+            x:Name="AllBackButton"
+        >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Graphics/BackNormal.png" Stretch="Uniform"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Graphics/BackHover.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <ListBox 
+            x:Name="buttonListBox"
+            Grid.Row="3"
+            Grid.Column="3"
+            Grid.RowSpan="5"
+            Grid.ColumnSpan="2"
+            Margin="0,0,45,12"
+            VerticalAlignment="Center"
+            Background="#1F1F1F"
+            BorderThickness="5"
+            BorderBrush="Black"
+            >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Button Content="{Binding}" Click="ItemButtonClick"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

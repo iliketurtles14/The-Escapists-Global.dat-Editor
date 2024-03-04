@@ -1,0 +1,702 @@
+﻿<Page x:Class="The_Escapists_Global_Editor.GeneralPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:The_Escapists_Global_Editor"
+      mc:Ignorable="d" 
+      Title="GeneralPage"
+      Height="450"
+      Width="800"
+      HorizontalAlignment="Center"
+      VerticalAlignment="Center"
+      
+      >
+    <Grid HorizontalAlignment="Center">
+        <Grid.Background>
+            <ImageBrush ImageSource="Graphics/WindowBackground.png" Stretch="None"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="72"/>
+            <ColumnDefinition Width="72"/>
+            <ColumnDefinition Width="72"/>
+            <ColumnDefinition Width="72"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="175"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        
+        
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="RedButton"
+            Click="RedClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/red_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/red_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/red_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="OrangeButton"
+            Click="OrangeClick"
+            
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/orange_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/orange_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/orange_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="3"
+            Grid.Column="4"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="PurpleButton"
+            Click="PurpleClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/purple_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/purple_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/purple_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="3"
+            Grid.Column="5"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="GreenButton"
+            Click="GreenClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/green_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/green_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/green_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="MultitoolButton"
+            Click="MultitoolClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/multitool_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/multitool_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/multitool_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="CuttersButton"
+            Click="CuttersClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/cutters_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/cutters_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/cutters_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="4"
+            Grid.Column="4"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="RopeButton"
+            Click="RopeClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/rope_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/rope_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/rope_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="4"
+            Grid.Column="5"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="GrappleButton"
+            Click="GrappleClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/grapple_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/grapple_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/grapple_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="5"
+            Grid.Column="2"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="PosterButton"
+            Click="PosterClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/poster_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/poster_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/poster_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="FenceButton"
+            Click="FenceClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/fence_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/fence_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/fence_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="5"
+            Grid.Column="4"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="VentButton"
+            Click="VentClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/vent_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/vent_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/vent_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="5"
+            Grid.Column="5"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="BraceButton"
+            Click="BraceClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/brace_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/brace_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/brace_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="6"
+            Grid.Column="2"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="CupButton"
+            Click="CupClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/cup_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/cup_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/cup_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="6"
+            Grid.Column="3"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="OutfitButton"
+            Click="OutfitClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/outfit_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/outfit_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/outfit_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="6"
+            Grid.Column="4"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="GuardButton"
+            Click="GuardClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/guard_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/guard_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/guard_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="6"
+            Grid.Column="5"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="ContrabandButton"
+            Click="ContrabandClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/contraband_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/contraband_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/contraband_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="7"
+            Grid.Column="2"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="PapersButton"
+            Click="PapersClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/papers_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/papers_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/papers_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="7"
+            Grid.Column="3"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="RaftButton"
+            Click="RaftClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/raft_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/raft_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/raft_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="7"
+            Grid.Column="4"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="ScrewdriverButton"
+            Click="ScrewdriverClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/screwdriver_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/screwdriver_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/screwdriver_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Grid.Row="7"
+            Grid.Column="5"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            BorderThickness="0"
+            Width="70" Margin="0,0,0,2"
+            Height="70"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="ZipButton"
+            Click="ZipClick"
+            >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Normal/zip_normal.png" Stretch="Fill"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Hover/zip_hover.png"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Pushed/zip_pushed.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Image
+            Margin="0,0,0,1"
+            Stretch="None"
+            Source="Graphics/Title.png"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="10"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+        ></Image>
+        <Image
+            Stretch="None"
+            Grid.Row="3"
+            Grid.Column="9"
+            Source="Graphics/SelectText.png"
+        ></Image>
+        <Image
+            Stretch="None"
+            Grid.Row="4"
+            Grid.Column="9"
+            VerticalAlignment="Top"
+            Source="Graphics/AboutTitle.png"
+        ></Image>
+        <Image
+            Stretch="None"
+            Grid.Row="4"
+            Grid.Column="9"
+            Grid.RowSpan="4"
+            VerticalAlignment="Bottom"
+            Margin="0,0,0,3"
+            Source="Graphics/AboutText.png"
+        ></Image>
+        <TextBox
+            Grid.Row="3"
+            Grid.Column="7"
+            BorderBrush="Black"
+            BorderThickness="5"
+            Grid.RowSpan="4"
+            Margin="0,0,0,23"
+            Focusable="False"
+            IsHitTestVisible="False"
+            x:Name="GeneralListTextBox"
+        ></TextBox>
+        <Button
+            Margin="0,49,0,0"
+            Grid.Row="6"
+            Grid.Column="7"
+            Grid.RowSpan="2"
+            VerticalAlignment="Top"
+            Width="175"
+            Height="35"
+            Click="GeneralResetClick"
+            x:Name="GeneralResetButton"
+            Background="Transparent"
+            BorderBrush="Transparent"
+        >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Graphics/ResetNormal.png" Stretch="Uniform"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Graphics/ResetHover.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Margin="0,0,0,30"
+            Grid.Row="6"
+            Grid.Column="7"
+            Grid.RowSpan="2"
+            VerticalAlignment="Bottom"
+            Width="175"
+            Height="35"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Click="GeneralCreateClick"
+            x:Name="GeneralCreateButton"
+        >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Graphics/CreateNormal.png" Stretch="Uniform"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Graphics/CreateHover.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button
+            Margin="0,0,0,0"
+            Grid.Row="6"
+            Grid.Column="7"
+            Grid.RowSpan="2"
+            VerticalAlignment="Bottom"
+            Width="175"
+            Height="35"
+            Background="Transparent"
+            BorderBrush="Transparent"
+            Click="GeneralItemsClick"
+            x:Name="GeneralItemsButton"
+        >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image x:Name="buttonImage" Source="Graphics/AllItemsNormal.png" Stretch="Uniform"/>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="buttonImage" Property="Source" Value="Graphics/AllItemsHover.png"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Page>

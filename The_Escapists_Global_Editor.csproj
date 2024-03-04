@@ -1,0 +1,146 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3B823E6C0E3952ED2A9366923D256BCBCF4038E6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>The_Escapists_Global_Editor_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+    <ApplicationIcon>TEGE.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Normal\brace_normal.png" />
+    <Resource Include="Normal\contraband_normal.png" />
+    <Resource Include="Normal\cup_normal.png" />
+    <Resource Include="Normal\cutters_normal.png" />
+    <Resource Include="Normal\fence_normal.png" />
+    <Resource Include="Normal\grapple_normal.png" />
+    <Resource Include="Normal\green_normal.png" />
+    <Resource Include="Normal\guard_normal.png" />
+    <Resource Include="Normal\orange_normal.png" />
+    <Resource Include="Normal\papers_normal.png" />
+    <Resource Include="Normal\poster_normal.png" />
+    <Resource Include="Normal\purple_normal.png" />
+    <Resource Include="Normal\raft_normal.png" />
+    <Resource Include="Normal\red_normal.png" />
+    <Resource Include="Normal\rope_normal.png" />
+    <Resource Include="Normal\screwdriver_normal.png" />
+    <Resource Include="Normal\vent_normal.png" />
+    <Resource Include="Normal\zip_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Normal\multitool_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Normal\outfit_normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\WindowBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Hover\brace_hover.png" />
+    <Resource Include="Hover\contraband_hover.png" />
+    <Resource Include="Hover\cup_hover.png" />
+    <Resource Include="Hover\cutters_hover.png" />
+    <Resource Include="Hover\fence_hover.png" />
+    <Resource Include="Hover\grapple_hover.png" />
+    <Resource Include="Hover\green_hover.png" />
+    <Resource Include="Hover\guard_hover.png" />
+    <Resource Include="Hover\multitool_hover.png" />
+    <Resource Include="Hover\orange_hover.png" />
+    <Resource Include="Hover\outfit_hover.png" />
+    <Resource Include="Hover\papers_hover.png" />
+    <Resource Include="Hover\poster_hover.png" />
+    <Resource Include="Hover\purple_hover.png" />
+    <Resource Include="Hover\raft_hover.png" />
+    <Resource Include="Hover\red_hover.png" />
+    <Resource Include="Hover\rope_hover.png" />
+    <Resource Include="Hover\screwdriver_hover.png" />
+    <Resource Include="Hover\vent_hover.png" />
+    <Resource Include="Hover\zip_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\AboutText.png" />
+    <Resource Include="Graphics\AboutTitle.png" />
+    <Resource Include="Graphics\AllItemsHover.png" />
+    <Resource Include="Graphics\AllItemsNormal.png" />
+    <Resource Include="Graphics\BackHover.png" />
+    <Resource Include="Graphics\BackNormal.png" />
+    <Resource Include="Graphics\CreateHover.png" />
+    <Resource Include="Graphics\CreateNormal.png" />
+    <Resource Include="Graphics\ResetHover.png" />
+    <Resource Include="Graphics\ResetNormal.png" />
+    <Resource Include="Graphics\SelectText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pushed\brace_pushed.png" />
+    <Resource Include="Pushed\contraband_pushed.png" />
+    <Resource Include="Pushed\cup_pushed.png" />
+    <Resource Include="Pushed\cutters_pushed.png" />
+    <Resource Include="Pushed\fence_pushed.png" />
+    <Resource Include="Pushed\grapple_pushed.png" />
+    <Resource Include="Pushed\green_pushed.png" />
+    <Resource Include="Pushed\guard_pushed.png" />
+    <Resource Include="Pushed\multitool_pushed.png" />
+    <Resource Include="Pushed\orange_pushed.png" />
+    <Resource Include="Pushed\outfit_pushed.png" />
+    <Resource Include="Pushed\papers_pushed.png" />
+    <Resource Include="Pushed\poster_pushed.png" />
+    <Resource Include="Pushed\purple_pushed.png" />
+    <Resource Include="Pushed\raft_pushed.png" />
+    <Resource Include="Pushed\red_pushed.png" />
+    <Resource Include="Pushed\rope_pushed.png" />
+    <Resource Include="Pushed\screwdriver_pushed.png" />
+    <Resource Include="Pushed\vent_pushed.png" />
+    <Resource Include="Pushed\zip_pushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TEGE.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+</Project>
